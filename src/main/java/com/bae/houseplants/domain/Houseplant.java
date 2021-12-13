@@ -6,11 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity // flags class as a table to Spring Data
+@Entity
 public class Houseplant {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO_INCREMENT 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	@Column(nullable = false)
