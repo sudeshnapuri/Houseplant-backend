@@ -26,8 +26,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-@Sql(scripts = { "classpath:houseplant-scheme.sql",
-"classpath:houseplant-data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+@Sql(scripts = { "classpath:houseplant-schema.sql", "classpath:houseplant-data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 
 public class HouseplantControllerIntegrationTest {
 	

@@ -8,5 +8,4 @@ import com.bae.houseplants.domain.Houseplant;
 @Repository
 public interface HouseplantRepository extends JpaRepository<Houseplant, Integer> {
 
-
 }
