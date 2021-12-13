@@ -1,6 +1,5 @@
 package com.bae.houseplants.domain;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,25 +12,49 @@ public class Houseplant {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(nullable = false)
 	private String plantName;
 	
-	@Column(nullable = false)
 	private String water;
 
-	@Column(nullable = false)
 	private String sunlight;
 
-	@Column(nullable = false)
 	private String humidity;
 	
 	private Integer quantity;
 	
+
+	public Houseplant(String plantName, String water, String sunlight, String humidity, Integer quantity) {
+		super();
+		this.plantName = plantName;
+		this.water = water;
+		this.sunlight = sunlight;
+		this.humidity = humidity;
+		this.quantity = quantity;
+	}
+
+	public Houseplant(Integer id, String plantName, String water, String sunlight, String humidity, Integer quantity) {
+		super();
+		this.id = id;
+		this.plantName = plantName;
+		this.water = water;
+		this.sunlight = sunlight;
+		this.humidity = humidity;
+		this.quantity = quantity;
+	}
 	
+
 	public Houseplant() {
 		super();
 	}
+	
+	public Integer getId() {
+		return id;
+	}
 
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 	public String getPlantName() {
 		return plantName;
 	}
@@ -77,15 +100,4 @@ public class Houseplant {
 		return "Houseplant [id=" + id + ", plantName=" + plantName + ", water=" + water + ", sunlight=" + sunlight
 				+ ", humidity=" + humidity + ", quantity=" + quantity + "]";
 	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	
-	
 }
