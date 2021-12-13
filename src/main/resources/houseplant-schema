@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `houseplants` CASCADE;
+
+CREATE TABLE `houseplants` (
+	`id` INTEGER PRIMARY KEY AUTO_INCREMENT,
+	`plant_name` VARCHAR(255) NOT NULL,
+	`water` VARCHAR(255) NOT NULL,
+	`sunlight` VARCHAR(255) NOT NULL,
+	`humidity` VARCHAR(255) NOT NULL,
+	`quantity` INTEGER
+);
