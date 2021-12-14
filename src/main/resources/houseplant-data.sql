@@ -1,4 +1,4 @@
-INSERT INTO `houseplants` (
+INSERT INTO `houseplant` (
 	`plant_name`, 
 	`water`, 
 	`sunlight`, 
