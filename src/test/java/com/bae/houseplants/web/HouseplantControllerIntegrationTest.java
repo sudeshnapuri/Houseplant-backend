@@ -26,10 +26,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-@Sql(scripts = { "classpath:houseplant-schema.sql", "classpath:houseplant-data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+@Sql(scripts = {"classpath:houseplant-schema.sql", "classpath:houseplant-data.sql"}, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 
 public class HouseplantControllerIntegrationTest {
-	
+	 
 	@Autowired
 	private MockMvc mvc;
 	
@@ -78,7 +78,7 @@ public class HouseplantControllerIntegrationTest {
 	
 	@Test
 	void updateByIdTest() throws Exception {
-		Houseplant updatePlant = new Houseplant(null, "Dragon Tree", "Low Demand", "Low Demand", "Low Demand", 2);
+		Houseplant updatePlant = new Houseplant(null, "Dracaena", "Low Demand", "Low Demand", "Low Demand", 2);
 		String updatePlantAsJSON = this.mapper.writeValueAsString(updatePlant);
 		
 		RequestBuilder req = put("/replace/1").contentType(MediaType.APPLICATION_JSON).content(updatePlantAsJSON);
