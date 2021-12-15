@@ -38,6 +38,12 @@ public class HouseplantServiceDB implements HouseplantService{
 	}
 	
 	@Override
+	public List<Houseplant> getAllPlantsByName(String plantName) {
+		List<Houseplant> found = this.repo.getAllByPlantName(plantName);
+		return found;
+	}
+	
+	@Override
 		public void removePlant(Integer id) {
 			this.repo.deleteById(id);
 		}
