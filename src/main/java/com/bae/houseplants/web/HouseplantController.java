@@ -52,8 +52,14 @@ private HouseplantService service;
 	public Houseplant getPlant(@PathVariable Integer id) {
 		return this.service.getPlant(id);
 	}
+	
+// READ BY TITLE	
+	@GetMapping("/getByPlantName/{plantName}")
+	public ResponseEntity<List<Houseplant>> getHouseplantByName(@PathVariable String plantName) {
+		List <Houseplant> found = this.service.getAllPlantsByName(plantName);
+		return ResponseEntity.ok(found);
+	}
 		
-
 // UPDATE BY ID	
 	@PutMapping("/replace/{id}")
 	public ResponseEntity<Houseplant> replacePlant(@PathVariable Integer id, @RequestBody Houseplant newPlant) {

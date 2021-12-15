@@ -18,6 +18,8 @@ public interface HouseplantService {
 	
 	Houseplant getPlant(Integer id);
 	
+	List<Houseplant> getAllPlantsByName(String plantName);
+	
 	Houseplant replacePlant(Integer id, Houseplant newPlant);
 	
 	void removePlant(@PathVariable Integer id);
