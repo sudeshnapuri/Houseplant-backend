@@ -77,6 +77,19 @@ public class HouseplantControllerIntegrationTest {
 	}
 	
 	@Test
+	void getByNameTest() throws Exception {
+		List<Houseplant> testPlant = List.of(new Houseplant(1, "Dragon Tree", "Low Demand", "Low Demand", "Low Demand", 2));
+		String testPlantAsJSON = this.mapper.writeValueAsString(testPlant);
+		
+		RequestBuilder req = get("/getByPlantName/Dragon Tree");
+		ResultMatcher checkStatus = status().isOk();
+		ResultMatcher checkBody = content().json(testPlantAsJSON); 
+
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+		
+	}
+	
+	@Test
 	void updateByIdTest() throws Exception {
 		Houseplant updatePlant = new Houseplant(null, "Dracaena", "Low Demand", "Low Demand", "Low Demand", 2);
 		String updatePlantAsJSON = this.mapper.writeValueAsString(updatePlant);
