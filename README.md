@@ -29,7 +29,7 @@ Firstly, I created a JIRA board to break down tasks into user stories and accept
 
 I then used Paint online to roughly design my front-end with the MustHave features (I was also able to add two ShouldHave features which are not on the original design).
 
-![image](https://user-images.githubusercontent.com/93253004/146408214-b1970bb7-546c-47ac-9f75-92a138a92601.png)
+![image](https://user-images.githubusercontent.com/93253004/146436291-da5ef0fb-61f8-43d4-9d2a-22942f1faf2d.png)
 
 I also set up two Git repositories, one for the front-end and one for the back-end. I used the feature branch model for both repositories but my main branch got detached from my develop branch so will keep this in mind for next project. I was able to make smart commits throughout the project as I linked my git with my jira board.
 
